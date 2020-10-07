@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Calorie Trackeroo</title>
 </head>
 <body>
+    <!-- <a id="addItem" href="#">Add Item</a> -->
+    <h1 class="title"> Welcome to my calorie counter!</h1>
+    <form>
+        <label for="name"></label>
+        <input type="text" id="itemName">
+        <label for="calories"></label>
+        <input type="number" id="calorieNumber">
+        <input type="submit" value="Add Item" id="submitItem">
+    </form>
+
+    <div id="items-container" class="container">
+        
+    </div>
     
+    <div id="totalCalories">
+
+    </div>
+    <script src="App.js"></script>
+    <script src="Item.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
