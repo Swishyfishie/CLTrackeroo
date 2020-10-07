@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", App.fetchAllItems)
      let newStuff = new Item(document.querySelector("#itemName").value, document.querySelector("#calorieNumber").value)
  
      newStuff.postItem()
-     
+     App.addAll()
  })
 
  // DELETE AND EDIT FUNCTIONS 
@@ -67,8 +67,9 @@ function addDeleteAndEditListeners(){
              let i = new Item(hehe)
              i.delete()
              this.parentElement.remove()
-             debugger
-             App.getTotalCals()
+            //  debugger
+             App.addAll()
          })
      })
 }
+

@@ -67,7 +67,7 @@ class Item {
             "Accept": "application/json"
           }
       })
-  
+      App.addAll()
   }
   
   save(){
@@ -86,7 +86,7 @@ class Item {
          .then(res => res.json())
          .then(item => console.log(item))
   
-      
+         App.addAll()
   }
   }
   
