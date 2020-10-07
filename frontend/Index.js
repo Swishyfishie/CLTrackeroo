@@ -69,4 +69,23 @@ delete(){
     })
 
 }
+
+save(){
+
+    console.log("SAVED")
+
+    let currentId = this.id 
+       fetch(BASE_URL+`/items/${currentId}`, {
+           method: "PUT",
+           body: JSON.stringify(this),
+           headers: {
+             "Content-Type": "application/json",
+             "Accept": "application/json"
+           }
+       })
+       .then(res => res.json())
+       .then(item => console.log(item))
+
+    
+}
 }
