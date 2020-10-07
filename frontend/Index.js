@@ -55,4 +55,18 @@ class Item {
     document.querySelector("#calorieNumber").value = ''
 
 }
+
+delete(){
+
+    let currentId = this.id
+    
+    fetch(BASE_URL+`/items/${currentId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+    })
+
+}
 }
