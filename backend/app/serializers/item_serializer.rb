@@ -1,3 +1,3 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :calories, :user_id
 end
