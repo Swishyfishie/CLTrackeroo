@@ -16,8 +16,7 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     @item = Item.new(item_params)
-    @item.user_id = 1 
-        # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ needs refactoring
+    @item.save
     if @item.save
       render json: @item, status: :created, location: @item
     else
