@@ -9,18 +9,22 @@
 <body>
     <!-- <a id="addItem" href="#">Add Item</a> -->
     <h1 class="title"> Welcome to my calorie counter!</h1>
-    <form>
-        <label for="users">Choose a user:</label>
-        <select name="users" id="users">
-            <input type="submit" value="Update user" id="selectUser">
-        </select>   
+    <nav>
+        <form>
+            <label for="users">Choose a user:</label>
+            <select name="users" id="users">
+                <input type="submit" value="Update user" id="selectUser">
+            </select>   
+    
+        </form>
+        <form>
+            <label for="name">Or create a new user: </label>
+            <input type="text" id="userName" placeholder="Username">
+            <input type="submit" value="Create User" id="createUser">
+        </form>
 
-    </form>
-    <form>
-        <label for="name">Or create a new user: </label>
-        <input type="text" id="userName" placeholder="Username">
-        <input type="submit" value="Create User" id="createUser">
-    </form>
+    </nav>
+
     <form>
         <h2>Add some items here</h2>
         <label for="name">Item Name: </label>
