@@ -22,14 +22,14 @@ class App {
         .then(res => res.json())
         .then(u => {
             u.map(e=>{
-                // debugger
+
                 let newUser = new User(e)
                 document.querySelector("#users").innerHTML += newUser.render()
 
             })
-            // console.log(u)
+
         })
-        // .then(u => console.log(u))
+
     } 
  
     static addAll(){
