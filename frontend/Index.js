@@ -72,7 +72,16 @@ function addDeleteAndEditListeners(){
          })
      })
 }
+document.querySelector("#createUser").addEventListener("click", (e)=>{
+    e.preventDefault()
+    let user = {
+        username: document.querySelector("#userName").value
+    }
 
+    let uu = new User(user)
+
+    uu.postUser()
+})
 document.querySelector("#selectUser").addEventListener("click", e=>{
     e.preventDefault()
     let user = {
