@@ -17,15 +17,6 @@ class App {
  
      }
  
-    //  static getTotalCals(){
-    //      // debugger
-    //      let sum = 0
-    //     App.allItems.forEach(e=>{
-    //         sum += parseInt(e.calories)
-    //     })
-    
-    //     document.querySelector("#totalCalories").innerHTML = `Total calories : ${sum}`
-    //  }
  
  
     static addAll(){

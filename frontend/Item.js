@@ -10,7 +10,8 @@ class Item {
   
       return `
           <div class="itemDetails" data-id="${this.id}">
-              <p class="itemName">${this.name}:</p>  <p class="itemCalories">${this.calories}</p> 
+              <p>Name:</p><p class="itemName">${this.name}</p>  
+              <p>Calories:</p><p class="itemCalories">${this.calories}</p> 
               <button id="delete-${this.id}" class="deleteItem">Delete</button>
               <button id="edit-${this.id}" class="editItem">Edit</button>
           </div>
@@ -41,15 +42,17 @@ class Item {
           // `
           items.innerHTML += `
           <div class="itemDetails" data-id="${item.id}">
-              <p class="itemName">${item.name}:</p>  <p class="itemCalories">${item.calories}</p> 
+              <p class="itemName">${item.name}</p>  <p class="itemCalories">${item.calories}</p> 
               <button id="delete-${item.id}" class="deleteItem">Delete</button>
               <button id="edit-${item.id}" class="editItem">Edit</button>
           </div>
           `
+            // items.innerHTML += this.render()
+            
           addDeleteAndEditListeners()
           App.allItems.push(new Item(item))
           // debugger
-          App.getTotalCals()
+          App.addAll()
       })
       document.querySelector("#itemName").value = ''
       document.querySelector("#calorieNumber").value = ''
