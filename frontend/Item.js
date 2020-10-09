@@ -20,7 +20,7 @@ class Item {
           `;
     }
     postItem(){
-      // debugger
+      debugger
       const item = {
           name: document.querySelector("#itemName").value,
           calories: document.querySelector("#calorieNumber").value,
@@ -52,7 +52,7 @@ class Item {
             // items.innerHTML += this.render()
             
           addDeleteAndEditListeners()
-          App.allItems.push(new Item(item))
+        //   App.allItems.push(new Item(item))
           // debugger
           App.addAll()
       })

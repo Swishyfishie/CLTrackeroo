@@ -81,6 +81,7 @@ document.querySelector("#createUser").addEventListener("click", (e)=>{
     let uu = new User(user)
 
     uu.postUser()
+    document.querySelector("#userName").value = ""
 })
 document.querySelector("#selectUser").addEventListener("click", e=>{
     e.preventDefault()
