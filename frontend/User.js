@@ -28,4 +28,29 @@ class User {
         .then(res => res.json())
         .then(user => console.log(user))
     }  
+
+    getUserItems(){
+        
+        App.allItems = []
+        fetch(BASE_URL+`/users/${this.id}`)
+        .then(res => res.json())
+        .then(user => {
+            // let newUser = new User(user)
+            document.querySelector("#items-container").innerHTML = ""
+
+            if(user.items.length === 0){
+                document.querySelector("#items-container").innerHTML = "<h4>There are no items here</h4>"
+            } else {
+                user.items.map(e=>{
+                    let gg = new Item(e)
+                    document.querySelector("#items-container").innerHTML += gg.render()
+                    App.allItems.push(gg)
+                    App.getTotalCals()
+                })
+            }
+            
+            
+            addDeleteAndEditListeners()
+        })
+    }
 }
