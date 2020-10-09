@@ -7,7 +7,7 @@ class Item {
     }
   
     render() {
-      // generate dynamic ids for the buttons "delete-${e.id}"
+
   
       return `
           <div class="itemDetails" data-id="${this.id}">
@@ -23,7 +23,8 @@ class Item {
       // debugger
       const item = {
           name: document.querySelector("#itemName").value,
-          calories: document.querySelector("#calorieNumber").value
+          calories: document.querySelector("#calorieNumber").value,
+          user_id: document.querySelector("#users").value
       }
   
       fetch(BASE_URL+"/items", {
