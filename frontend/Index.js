@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000/"
 
-document.addEventListener("DOMContentLoaded", App.fetchAllItems)
+document.addEventListener("DOMContentLoaded", App.fetchAllUsers)
 
 
 
@@ -73,3 +73,12 @@ function addDeleteAndEditListeners(){
      })
 }
 
+document.querySelector("#selectUser").addEventListener("click", e=>{
+    e.preventDefault()
+    let user = {
+        id : e.target.parentElement.querySelector("#users").value
+    }
+    let u = new User(user)
+
+    u.getUserItems()
+})
