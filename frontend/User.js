@@ -44,8 +44,8 @@ class User {
                 user.items.map(e=>{
                     let gg = new Item(e)
                     document.querySelector("#items-container").innerHTML += gg.render()
-                    App.allItems.push(gg)
-                    App.getTotalCals()
+                    // App.allItems.push(gg)
+                    App.addAll()
                 })
             }
             
