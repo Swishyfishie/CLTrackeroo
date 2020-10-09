@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Calorie Trackeroo</title>
+    <title>Calorie Trackeru</title>
 </head>
 <body>
     <!-- <a id="addItem" href="#">Add Item</a> -->
     <h1 class="title"> Welcome to my calorie counter!</h1>
     <form>
-        <label for="name"></label>
+        <label for="name">Item Name: </label>
         <input type="text" id="itemName">
-        <label for="calories"></label>
+        <label for="calories">Calories: </label>
         <input type="number" id="calorieNumber">
         <input type="submit" value="Add Item" id="submitItem">
     </form>
@@ -20,11 +20,26 @@
     <div id="items-container" class="container">
         
     </div>
-    
+    <form>
+        <label for="name">Username: </label>
+        <input type="text" id="userName">
+        <input type="submit" value="Create User" id="createUser">
+    </form>
+
+    <form>
+        <label for="users">Choose a user:</label>
+        <select name="users" id="users">
+            <input type="submit" value="Update user" id="selectUser">
+        </select>   
+
+    </form>
+
+
     <div id="totalCalories">
 
     </div>
     <script src="App.js"></script>
+    <script src="User.js"></script>
     <script src="Item.js"></script>
     <script src="index.js"></script>
 </body>
