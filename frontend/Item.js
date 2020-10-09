@@ -8,15 +8,15 @@ class Item {
   
     render() {
 
-  
       return `
-          <div class="itemDetails" data-id="${this.id}">
-              <p>Name:</p><p class="itemName">${this.name}</p>  
+
+          <div class="itemDetails " data-user="${this.user_id}" data-id="${this.id}">
+              <p>Name:</p><p class="itemName ">${this.name}</p>  
               <p>Calories:</p><p class="itemCalories">${this.calories}</p> 
               <button id="delete-${this.id}" class="deleteItem">Delete</button>
               <button id="edit-${this.id}" class="editItem">Edit</button>
           </div>
-  
+
           `;
     }
     postItem(){
@@ -37,23 +37,29 @@ class Item {
       })
       .then(res => res.json())
       .then(item => {
+        debugger
           let items = document.querySelector("#items-container")
+
+          if(document.querySelectorAll(".itemDetails")[0].dataset.user === parseInt(document.querySelector("#users").value)){
+            items.innerHTML += `
+            <div class="itemDetails" data-id="${item.id}">
+                <p class="itemName">${item.name}</p>  <p class="itemCalories">${item.calories}</p> 
+                <button id="delete-${item.id}" class="deleteItem">Delete</button>
+                <button id="edit-${item.id}" class="editItem">Edit</button>
+            </div>
+            `
+        }else {
+            console.log("it's not ok")
+        }
           // items.innerHTML += `
           // <div class="itemDetails" data-id="${item.id}"><p class="itemName">${item.name}: </p>  <p class="itemCalories">${item.calories}</p> 
           // <button class="deleteItem">Delete</button><button id="edit-${this.id}" class="editItem">Edit</button></div>
           // `
-          items.innerHTML += `
-          <div class="itemDetails" data-id="${item.id}">
-              <p class="itemName">${item.name}</p>  <p class="itemCalories">${item.calories}</p> 
-              <button id="delete-${item.id}" class="deleteItem">Delete</button>
-              <button id="edit-${item.id}" class="editItem">Edit</button>
-          </div>
-          `
-            // items.innerHTML += this.render()
+
+
             
           addDeleteAndEditListeners()
-        //   App.allItems.push(new Item(item))
-          // debugger
+
           App.addAll()
       })
       document.querySelector("#itemName").value = ''

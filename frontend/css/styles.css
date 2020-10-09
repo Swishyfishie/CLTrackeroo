@@ -5,6 +5,7 @@
   }
 body {
     background-color: rgb(245, 253, 255);
+    color:#black;
 }
  .title {
      text-align: center;
@@ -13,8 +14,9 @@ body {
 
  nav {
 
-     background-color: aliceblue;
+     background-color: #464C5B;
      padding: 2rem;
+     color: #EEF0EA;
  }
 form {
     text-align: center;
