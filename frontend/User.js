@@ -12,7 +12,8 @@ class User {
     }
 
     postUser(){
-
+        
+        document.querySelector("#users").innerHTML = ""
         let user = {
             username : this.username
         }
@@ -27,6 +28,8 @@ class User {
         })
         .then(res => res.json())
         .then(user => console.log(user))
+
+        App.fetchAllUsers()
     }  
 
     getUserItems(){

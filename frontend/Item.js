@@ -20,7 +20,7 @@ class Item {
           `;
     }
     postItem(){
-      debugger
+ 
       const item = {
           name: document.querySelector("#itemName").value,
           calories: document.querySelector("#calorieNumber").value,
