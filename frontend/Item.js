@@ -3,6 +3,7 @@ class Item {
       this.id = obj.id;
       this.name = obj.name;
       this.calories = obj.calories;
+      this.user_id = obj.user_id
     }
   
     render() {
