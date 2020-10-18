@@ -37,24 +37,28 @@ class Item {
       })
       .then(res => res.json())
       .then(item => {
-        debugger
           let items = document.querySelector("#items-container")
 
-          if(document.querySelectorAll(".itemDetails")[0].dataset.user === parseInt(document.querySelector("#users").value)){
-            items.innerHTML += `
-            <div class="itemDetails" data-id="${item.id}">
-                <p class="itemName">${item.name}</p>  <p class="itemCalories">${item.calories}</p> 
-                <button id="delete-${item.id}" class="deleteItem">Delete</button>
-                <button id="edit-${item.id}" class="editItem">Edit</button>
-            </div>
-            `
-        }else {
-            console.log("it's not ok")
-        }
-          // items.innerHTML += `
-          // <div class="itemDetails" data-id="${item.id}"><p class="itemName">${item.name}: </p>  <p class="itemCalories">${item.calories}</p> 
-          // <button class="deleteItem">Delete</button><button id="edit-${this.id}" class="editItem">Edit</button></div>
-          // `
+        //   if(document.querySelectorAll(".itemDetails")[0].dataset.user === document.querySelector("#users").value || document.querySelectorAll(".itemDetails").length === 0){
+        //     debugger
+        //     items.innerHTML += `
+            // <div class="itemDetails" data-id="${item.id}">
+            //     <p class="itemName">${item.name}</p>  <p class="itemCalories">${item.calories}</p> 
+            //     <button id="delete-${item.id}" class="deleteItem">Delete</button>
+            //     <button id="edit-${item.id}" class="editItem">Edit</button>
+            // </div>
+        //     `
+        // }else {
+        //     console.log("it's not ok")
+        // }
+          items.innerHTML += `
+          <div class="itemDetails " data-user="${item.user_id}" data-id="${item.id}">
+              <p>Name:</p><p class="itemName ">${item.name}</p>  
+              <p>Calories:</p><p class="itemCalories">${item.calories}</p> 
+              <button id="delete-${item.id}" class="deleteItem">Delete</button>
+              <button id="edit-${item.id}" class="editItem">Edit</button>
+          </div>
+          `
 
 
             

@@ -2,20 +2,20 @@ class App {
     static allItems = []
  
  
-     static fetchAllItems(){
-         fetch(BASE_URL+"/items")
-         .then(res => res.json())
-         .then(items => 
-             items.map(e => {
-                 let newItem = new Item(e)
-         document.querySelector("#items-container").innerHTML += newItem.render()
-         addDeleteAndEditListeners()
-         App.allItems.push(newItem)
-         App.addAll()
-         }))
+    //  static fetchAllItems(){
+    //      fetch(BASE_URL+"/items")
+    //      .then(res => res.json())
+    //      .then(items => 
+    //          items.map(e => {
+    //              let newItem = new Item(e)
+    //      document.querySelector("#items-container").innerHTML += newItem.render()
+    //      addDeleteAndEditListeners()
+    //      App.allItems.push(newItem)
+    //      App.addAll()
+    //      }))
  
  
-     }
+    //  }
  
      static fetchAllUsers(){
         fetch(BASE_URL+"/users")
