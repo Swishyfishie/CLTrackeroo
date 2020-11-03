@@ -8,6 +8,8 @@ Clone the project
 
 CD into the backend folder
 
+Run bundle install
+
 Run "rails s" to start the server
 
 Launch "index.html" in the frontend folder
