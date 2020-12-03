@@ -2,16 +2,18 @@
 
 This is a very simple calorie tracker made for my bootcamp javascript+rails assignment.
 
-You must have ruby and rails installed
+### Requirements to run this project locally
 
-Clone the project
+  You must have Ruby and Ruby on Rails installed
 
-CD into the backend folder
+`git clone git@github.com:Swishyfishie/CLTrackeroo.git`
 
-Run bundle install
+`cd backend`
 
-Run "rails s" to start the server
+`bundle install`
 
-Launch "index.html" in the frontend folder
+`rails s`
+
+Open index.html in the Frontend folder
 
 You're good to go!
